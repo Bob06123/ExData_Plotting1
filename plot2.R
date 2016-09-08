@@ -1,4 +1,4 @@
-## This Script produces a Plot1.PNG file containing a plot of 
+## This Script produces a Plot2.PNG file containing a plot of 
 ## amount of Kilowatts on the y axis, labelled as "Global Active Power (kilowatts)" that households consume 
 ## on the dates 2007-02-01 and 2007-02-02 (Thursday and Friday)
 
