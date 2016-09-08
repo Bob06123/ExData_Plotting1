@@ -13,12 +13,12 @@ download.file(fileUrl,destfile="./Exploratory/Dataset.zip")
 unzip(zipfile="./Exploratory/Dataset.zip",exdir="./Exploratory")
 baseSet <- read.table("./Exploratory/household_power_consumption.txt", header = TRUE, sep = ";", na.strings="?", stringsAsFactors=FALSE, dec=".")
 
-### Creating the subset with focus days
+### Creating the subset with focus days and prepartion for plotting
 subbaseSet <- baseSet[baseSet$Date %in% c("1/2/2007","2/2/2007") ,]
-
-### Plot
 datetime <- strptime(paste(subbaseSet$Date, subbaseSet$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 globalActivePower <- as.numeric(subbaseSet$Global_active_power)
+
+### Plot
 png("./Exploratory/plot2.png", width=480, height=480)
 plot(datetime, globalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
