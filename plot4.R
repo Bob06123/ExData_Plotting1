@@ -1,4 +1,4 @@
-## This Script produces a Plot4.PNG file containing seral plots about
+## This Script produces a Plot4.PNG file containing several plots about
 ## energy consumption of House holds
 ## on the dates 2007-02-01 and 2007-02-02 (Thursday and Friday)
 
@@ -25,27 +25,12 @@ subMetering3 <- as.numeric(subbaseSet$Sub_metering_3)
 ## plot
 png("./Exploratory/plot4.png", width=480, height=480)
 par(mfrow = c(2, 2)) 
-
 plot(datetime, globalActivePower, type="l", xlab="", ylab="Global Active Power", cex=0.2)
-
 plot(datetime, voltage, type="l", xlab="datetime", ylab="Voltage")
-
 plot(datetime, subMetering1, type="l", ylab="Energy Submetering", xlab="")
 lines(datetime, subMetering2, type="l", col="red")
 lines(datetime, subMetering3, type="l", col="blue")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=, lwd=2.5, col=c("black", "red", "blue"), bty="o")
-
 plot(datetime, globalReactivePower, type="l", xlab="datetime", ylab="Global_reactive_power")
 
-dev.off()
-### Plot
-subMetering1 <- as.numeric(subbaseSet$Sub_metering_1)
-subMetering2 <- as.numeric(subbaseSet$Sub_metering_2)
-subMetering3 <- as.numeric(subbaseSet$Sub_metering_3)
-
-png("./Exploratory/plot3.png", width=480, height=480)
-plot(datetime, subMetering1, type="l", ylab="Energy Submetering", xlab="")
-lines(datetime, subMetering2, type="l", col="red")
-lines(datetime, subMetering3, type="l", col="blue")
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=2.5, col=c("black", "red", "blue"))
 dev.off()
