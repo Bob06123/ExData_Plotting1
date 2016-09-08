@@ -1,4 +1,4 @@
-## This Script produces a Plot1.PNG file containing a plot of 
+## This Script produces a Plot3.PNG file containing a plot of 
 ## Eneryconsumption  submetering per moment of the day on the y-axis
 ## (Roughly: 1 is Kitchen, 2 is Laundry, 3 is Heating and Airconditioning)
 ## on the dates 2007-02-01 and 2007-02-02 (Thursday and Friday)
