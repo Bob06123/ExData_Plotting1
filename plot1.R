@@ -9,7 +9,7 @@ if(!file.exists("./Exploratory")){dir.create("./Exploratory")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileUrl,destfile="./Exploratory/Dataset.zip")
 
-#XUnzip in the /Exploratory directory and put dataset in baseSet
+#Unzip in the /Exploratory directory and put dataset in baseSet
 unzip(zipfile="./Exploratory/Dataset.zip",exdir="./Exploratory")
 baseSet <- read.table("./Exploratory/household_power_consumption.txt", header = TRUE, sep = ";", na.strings="?", stringsAsFactors=FALSE, dec=".")
 
